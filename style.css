@@ -1,0 +1,338 @@
+
+/* 1. Overall page design */
+body {
+    background: linear-gradient(to bottom, #ffe4f1, #e8e2ff, #e0fff4);
+    color: #6b477b;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 30px 15px;
+    min-height: 100vh;
+}
+
+/* 2. Main birthday heading */
+h1 {
+    color: #d85b9b;
+    font-size: 36px;
+    text-shadow: 2px 2px 5px #ffffff;
+    margin-bottom: 20px;
+}
+
+/* 3. Section headings */
+h2 {
+    color: #9870cf;
+    margin-top: 35px;
+}
+
+/* 4. Paragraph text */
+p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* 5. Magical birthday button */
+button {
+    background: #ffacd2;
+    color: #653b71;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #d9b8e8;
+}
+
+/* 6. Button effect when the mouse is over it */
+button:hover {
+    background: #d9c3ff;
+    transform: scale(1.05);
+}
+
+/* 7. Soft cards for website sections */
+body > h2,
+body > h2 ~ p {
+    position: relative;
+}
+
+/* 8. Gentle sparkle effect on the main heading */
+h1 {
+    animation: sparkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes sparkle {
+    from {
+        text-shadow: 0 0 5px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 18px #ff9fda;
+    }
+}
+
+/* 9. Make the website fit small screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+
+/* Photo gallery layout */
+.memory-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+/* Individual photo cards */
+.memory-card {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #d9b8e8;
+    transition: transform 0.3s;
+}
+
+/* Photos inside the cards */
+
+
+.memory-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+    background-color: #fff5fb;
+}
+
+
+
+
+
+/* Same photo style for memories 1, 2, 3, 6 and 9 */
+.memory-card:nth-child(1) img,
+.memory-card:nth-child(2) img,
+.memory-card:nth-child(3) img,
+.memory-card:nth-child(6) img,
+.memory-card:nth-child(9) img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 10px;
+}
+
+
+
+/* Captions under the photos */
+.memory-card p {
+    font-size: 14px;
+    color: #9870cf;
+    margin-bottom: 5px;
+}
+
+/* Gentle movement when you hover */
+.memory-card:hover {
+    transform: translateY(-5px) rotate(-1deg);
+}
+
+/* Two columns on smaller screens */
+@media (max-width: 600px) {
+    .memory-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .memory-card img {
+        height: 150px;
+    }
+}
+
+/* Memory description popup */
+.memory-popup {
+    max-width: 450px;
+    margin: 25px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #fff0f7, #eee5ff);
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px #d9b8e8;
+    animation: letterOpen 0.5s ease;
+}
+
+.memory-popup h3 {
+    color: #d85b9b;
+    font-size: 23px;
+}
+
+.memory-popup p {
+    color: #6b477b;
+    line-height: 1.8;
+}
+
+.close-button {
+    float: right;
+    border: none;
+    background: transparent;
+    color: #d85b9b;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.memory-story {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.memory-story[hidden] {
+    display: none;
+}
+
+.memory-story img {
+    width: 45%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.story-text {
+    flex: 1;
+    text-align: left;
+}
+
+.story-text h3 {
+    color: #d63384;
+}
+
+.story-text p {
+    color: #555;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .memory-story {
+        flex-direction: column;
+    }
+
+    .memory-story img {
+        width: 100%;
+    }
+}
+
+
+/* Separate full-screen pages */
+.page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Make sure hidden pages stay hidden */
+.page[hidden] {
+    display: none !important;
+}
+
+/* Welcome page */
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Gallery page */
+.gallery-page {
+    min-height: 100vh;
+}
+
+.gallery-page .memory-gallery {
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+/* Story page */
+.story-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.memory-story {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+}
+
+.memory-story img {
+    width: 48%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.story-text {
+    flex: 1;
+    text-align: left;
+}
+
+.page button {
+    padding: 14px 24px;
+    margin: 15px;
+    border: none;
+    border-radius: 25px;
+    background: #e754a6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.page button:hover {
+    background: #c83b8c;
+}
+
+.memory-card img {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .memory-story {
+        flex-direction: column;
+    }
+
+    .memory-story img {
+        width: 100%;
+        max-height: 55vh;
+    }
+
+    .story-text {
+        text-align: center;
+    }
+}

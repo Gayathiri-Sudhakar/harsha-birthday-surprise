@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Magic for Harsha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PAGE 1: WELCOME -->
+    <section id="welcomePage" class="page welcome-page">
+        <h1>✨ A Little Magic for Harsha ✨</h1>
+
+        <p>Someone special deserves something magical.</p>
+
+        <h2>🎂 Countdown to Harsha's Birthday 🎂</h2>
+        <h2 id="countdown">Loading countdown...</h2>
+
+        <p>Every memory with you is a little piece of magic. 💖</p>
+
+        <button id="openGallery">Open Your Surprise 💗</button>
+    </section>
+
+
+    <!-- PAGE 2: PHOTO GALLERY -->
+    <section id="galleryPage" class="page gallery-page" hidden>
+        <h1>📸 Our Beautiful Memories</h1>
+        <p>Double-click any picture to discover its story! 💗</p>
+
+        <div class="memory-gallery">
+
+            <div class="memory-card">
+                <img src="images/Harsha-1.jpeg" alt="Memory 1 with Harsha">
+                <p>✨ A moment to remember</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/Harsha-2.jpeg" alt="Memory 2 with Harsha">
+                <p>🌸 Happiness looks like this</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/Harsha-3.jpeg" alt="Memory 3 with Harsha">
+                <p>💕 One of my favourite moments</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/Harsha-4.jpeg" alt="Memory 4 with Harsha">
+                <p>🦋 A little piece of magic</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/Harsha-5.jpeg" alt="Memory 5 with Harsha">
+                <p>🌷 Memories I will treasure</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/Harsha-6.jpeg" alt="Memory 6 with Harsha">
+                <p>🎀 A beautiful day of you</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/Harsha-7.jpeg" alt="Memory 7 with Harsha">
+                <p>💖 Smiles worth keeping</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/Harsha-8.jpeg" alt="Memory 8 with Harsha">
+                <p>🌈 Another happy memory</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/Harsha-9.jpeg" alt="Memory 9 with Harsha">
+                <p>🧚‍♀️ My little Angel</p>
+            </div>
+
+        </div>
+
+        <button id="backToWelcome">⬅ Back to Welcome</button>
+    </section>
+
+
+    <!-- PAGE 3: SELECTED PHOTO AND STORY -->
+    <section id="storyPage" class="page story-page" hidden>
+        <h1>💗 A Special Memory 💗</h1>
+
+        <div class="memory-story">
+            <img id="storyPhoto" src="" alt="Selected memory">
+
+            
+
+<div class="story-text">
+    <h2 id="storyTitle"></h2>
+    <p id="storyDescription"></p>
+
+    <label for="memoryResponse">
+        💌 Harsha, what do you remember about this moment?
+    </label>
+
+    <textarea
+        id="memoryResponse"
+        placeholder="Write your memories here..."
+        rows="5"
+    ></textarea>
+
+    <button id="shareMemoryButton">
+        Submit & Next Photo 💌
+    </button>
+
+    <p id="saveStatus" role="status"></p>
+    <button id="continueToMessage" hidden>
+    Next: Write Me a Message 💌
+    </button>
+    </div>
+
+
+        </div>
+
+        <button id="backToGallery">⬅ Back to Memories</button>
+    </section>
+    
+<!-- PAGE 4: PERSONAL MESSAGE -->
+<section id="messagePage" class="page" hidden>
+    <h1>💌 A Little Message for Me 💗</h1>
+
+    <p>
+        Harsha, now that you've revisited our memories,
+        there's one more thing I want to know.
+    </p>
+
+    <p>
+        Write anything you want to tell me.
+        You can share your feelings, your thoughts,
+        a secret, or simply a message from your heart. 🥹💕
+    </p>
+
+    <textarea
+        id="personalMessage"
+        placeholder="Dear Gayu... 💗 Write whatever is in your heart..."
+        rows="10"
+        style="width: 90%; max-width: 700px; font-size: 20px;
+        padding: 18px; border-radius: 12px; box-sizing: border-box;"
+    ></textarea>
+
+    <br><br>
+
+    <button id="submitPersonalMessage">
+        Submit My Message 💌
+    </button>
+
+    <p id="personalMessageStatus" role="status"></p>
+</section>
+
+
+<!-- PAGE 5: BIRTHDAY SURPRISE -->
+<section id="birthdayPage" class="page" hidden>
+    <div style="padding: 30px 15px; text-align: center;">
+        <h1 style="font-size: clamp(38px, 8vw, 76px);">
+            🎉 ADVANCE HAPPY BIRTHDAY 🎉
+        </h1>
+
+        <h1 style="font-size: clamp(48px, 10vw, 100px);">
+            💖 HARSHA 💖
+        </h1>
+
+        <p style="font-size: 25px;">
+            🎂 🎈 🥳 🎁 💐
+        </p>
+
+        <p style="font-size: 23px; line-height: 1.8;">
+            You are a beautiful part of my life,
+            and every memory with you means so much to me.
+            May your life be filled with happiness,
+            love, laughter, and endless beautiful moments.
+        </p>
+
+        <h2 style="font-size: 32px;">
+            Stay happy, my little angel! 🦋💕
+        </h2>
+
+        <p style="font-size: 25px;">
+            With lots of love, always 💗
+        </p>
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
